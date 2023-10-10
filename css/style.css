@@ -19,6 +19,7 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   outline: 0;
+  background-color: #202020;
 }
 
 body,
@@ -69,11 +70,13 @@ ul {
 }
 
 .navigation {
-  background-color: #c35023;
+  background-color: #121212;
   position: sticky;
   top: 0;
   left: 0;
   width: 100%;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 .navigation ul {
   display: -webkit-box;
@@ -113,6 +116,10 @@ ul {
   width: 100%;
 }
 
+.scrolled .navigation {
+  background-color: #c35023;
+}
+
 .header {
   background-color: #121212;
   min-height: calc(100vh - 60px);
@@ -133,7 +140,6 @@ ul {
 
 main {
   height: 2000px;
-  background-color: aqua;
 }
 
 footer {

@@ -1,5 +1,5 @@
 .header {
-	background-color: $color_header;
+	background-color: $color_background_header;
 	min-height: calc(100vh - #{$header_nav + px});
 	display: flex;
 	flex-direction: column;

@@ -1,9 +1,10 @@
 .navigation {
-	background-color: $color_nav;
+	background-color: $color_background_header;
 	position: sticky;
 	top: 0;
 	left: 0;
 	width: 100%;
+	transition: background-color 0.2s ease;
 	ul {
 		display: flex;
 		justify-content: center;
@@ -35,5 +36,11 @@
 				}
 			}
 		}
+	}
+}
+
+.scrolled {
+	.navigation {
+		background-color: $color_background_nav;
 	}
 }
