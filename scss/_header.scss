@@ -1,0 +1,8 @@
+.header {
+	background-color: $color_header;
+	min-height: calc(100vh - #{$header_nav + px});
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
