@@ -10,12 +10,34 @@
 	<link rel="stylesheet" type="text/css" href="css/style.min.css?v=8">
 </head>
 <body>
-	<nav class="navigation">
-		<ul>
+	<div class="mob-menu"><button type="button" class="btn btn-menu"><i class="i_1"></i><i class="i_2"></i><i class="i_3"></i><span class="title_hide">Меню сайта</span></button></div>
+	<nav class="menu">
+		<div class="menu__close"><button type="button" class="btn btn-menu-close"><span class="title_hide">Меню сайта</span></button></div>
+		<ul class="menu__nav">
 			<li><a href="#">Обо мне</a></li>
 			<li><a href="#">Навыки</a></li>
 			<li><a href="#">Контакты</a></li>
 		</ul>
+		<div class="menu__soc">
+			<a rel="nofollow" target="_blank" href="https://vk.com/korea_express">
+				<svg class="icon add-bookmarks">
+					<use xlink:href="images/icons.svg#vk" />
+				</svg>
+				<span class="title_hide">Мы в ВКонтакте</span>
+			</a>
+			<a rel="nofollow" target="_blank" href="https://t.me/k_exs">
+				<svg class="icon add-bookmarks">
+					<use xlink:href="images/icons.svg#telegram" />
+				</svg>
+				<span class="title_hide">Мы в Telegram</span>
+			</a>
+			<a rel="nofollow" target="_blank" href="https://wa.me/79527911919">
+				<svg class="icon add-bookmarks">
+					<use xlink:href="images/icons.svg#whatsap" />
+				</svg>
+				<span class="title_hide">Написать в WhatsApp</span>
+			</a>
+		</div>
 	</nav>
 	<header class="header">
 		<h1>Делаем сайты</h1>

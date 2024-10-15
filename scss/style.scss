@@ -4,6 +4,11 @@ $color_background_nav: #c35023;
 $color_background_header: #121212;
 $color_background_body: #202020;
 
+:root {
+	--background-body: #1a1a1a;
+	--pink: #d37fdd;
+}
+
 @import "_reset";
 @import "_other";
 @import "_menu";
