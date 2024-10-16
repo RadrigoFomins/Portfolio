@@ -1,6 +1,7 @@
 .header {
-	background-color: $color_background_header;
-	min-height: calc(100vh - #{$header_nav + px});
+	background-color: #121212;
+	background-image: url(../images/header_fon.webp?v=1);
+	min-height: calc(100vh - $header_nav);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

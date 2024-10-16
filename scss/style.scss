@@ -1,18 +1,18 @@
-$header_nav: 60;
+$header_nav: 60px;
 
-$color_background_nav: #c35023;
-$color_background_header: #121212;
-$color_background_body: #202020;
+$color_text: #626a77;
+$color_link: #0b1c39;
+$color_link_hover: #2572ff;
 
-:root {
-	--background-body: #1a1a1a;
-	--pink: #d37fdd;
-}
+$color_blue: #3070e6;
 
 @import "_reset";
 @import "_other";
 @import "_menu";
 @import "_header";
 @import "_main";
+@import "_aboutme";
+@import "_services";
+@import "_contacts";
 @import "_footer";
 @import "_scroll-animation";
