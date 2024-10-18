@@ -576,9 +576,11 @@ ul {
   }
 }
 .header {
+  /*
   background-color: #fff;
-  background-image: url(../images/header_fon_03.webp?v=1);
+  background-image: url(../images/fon/header_fon_08.webp?v=1);
   background-size: cover;
+  */
   min-height: calc(100vh - 60px);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -591,21 +593,6 @@ ul {
           align-items: center;
   position: relative;
   padding: 20px;
-  /*
-  &::after {
-  	content: "";
-  	display: block;
-  	position: absolute;
-  	top: 0;
-  	left: 0;
-  	height: 100%;
-  	width: 100%;
-  	background-color: #fff;
-  	opacity: 0.2;
-  	z-index: 1;
-  	overflow: hidden;
-  }
-  	*/
 }
 
 .header__content {
@@ -618,9 +605,10 @@ ul {
   position: relative;
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
-  padding: clamp(30px, 5.55556vw, 50px);
+  padding: clamp(30px, 6.66667vw, 60px);
   background-color: rgba(255, 255, 255, 0.4);
   max-width: 800px;
+  z-index: 2;
 }
 .header__content img {
   display: block;

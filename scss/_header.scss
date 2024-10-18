@@ -1,37 +1,25 @@
 .header {
+	/*
 	background-color: #fff;
-	background-image: url(../images/header_fon_03.webp?v=1);
+	background-image: url(../images/fon/header_fon_08.webp?v=1);
 	background-size: cover;
+	*/
 	min-height: calc(100vh - $header_nav);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: relative;
 	padding: 20px;
-	/*
-	&::after {
-		content: "";
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		background-color: #fff;
-		opacity: 0.2;
-		z-index: 1;
-		overflow: hidden;
-	}
-		*/
 }
 .header__content {
 	display: flex;
 	align-items: center;
 	position: relative;
 	backdrop-filter: blur(4px);
-	padding: clm_px(30, 900, 50);
+	padding: clm_px(30, 900, 60);
 	background-color: rgba(255, 255, 255, 0.4);
 	max-width: 800px;
+	z-index: 2;
 	img {
 		display: block;
 		width: 100%;
