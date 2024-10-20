@@ -32,7 +32,7 @@ $(document).ready(function () {
 		$('body').append('<div class="menu-backdrop"></div>');
 		$('.menu-backdrop').fadeIn(200);
 	});
-	$('.btn-menu-close, .menu__nav a').click(function () {
+	$('.btn-menu-close, .menu__nav a, .menu__nav .top .icon').click(function () {
 		functionCloseMenu();
 	});
 	$(document).click(function (event) {
@@ -47,6 +47,13 @@ $(document).ready(function () {
 		elementClick = $(this).attr("href")
 		destination = $(elementClick).offset().top - 50;
 		$("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 600);
+		return false;
+	});
+	
+	$('.top .icon').click(function () {
+		$('body,html').animate({
+			scrollTop: 0
+		}, 600);
 		return false;
 	});
 });

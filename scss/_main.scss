@@ -1,0 +1,70 @@
+.section {
+	padding-top: clm_px(40, 600, 60);
+	padding-bottom: clm_px(40, 600, 60);
+	@extend %max_wight;
+	> div {
+		&:not(.title) {
+			margin-top: clm_px(20, 600, 40);
+		}
+	}
+}
+.title {
+	width: 100%;
+	text-align: center;
+	h2 {
+		text-transform: uppercase;
+	}
+	> div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.icon {
+			margin: 0 7px;
+			font-size: 1.6rem;
+			color: $color_blue;
+		}
+		&::after,
+		&::before {
+			content: '';
+			display: block;
+			width: clm_px(40,600,50);
+			height: 2px;
+			background-color: $color_blue;
+		}
+	}
+}
+.section__img {
+	> div {
+		position: relative;
+		width: 100%;
+		padding-top: 130%;
+		overflow: hidden;
+	}
+}
+.section__text {
+	> *:not(:first-child) {
+		margin-top: 0.9rem;
+	}
+}
+.oki_1,
+.oki_2 {
+	position: absolute;
+	width: 91%;
+	height: 95%;
+	overflow: hidden;
+	border-top-left-radius: 2rem;
+	border-bottom-right-radius: 2rem;
+	@extend %img_pozition;
+}
+.oki_1 {
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	filter: sepia(100%);
+	opacity: 0.6;
+}
+.oki_2 {
+	top: 0;
+	left: 0;
+	z-index: 2;
+}

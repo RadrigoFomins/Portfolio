@@ -5,7 +5,7 @@ $color_text: #0b1c39;
 $color_link: #0b1c39;
 $color_link_hover: #2572ff;
 
-$color_blue: #3070e6;
+$color_blue: #2572ff;
 
 @function clm_rem($min, $width, $max) {
 	$min_rem: #{$min + rem};
@@ -19,6 +19,17 @@ $color_blue: #3070e6;
 	$max_px: #{$max + px};
 	$width_vw: #{calc(round($max / ($width / 100) * 100000) / 100000) + vw};
 	@return clamp($min_px, $width_vw, $max_px);
+}
+
+%max_wight {
+	padding-left: 5%;
+	padding-right: 5%;
+	> * {
+		width: 100%;
+		max-width: 900px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 @import "_font";
