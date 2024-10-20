@@ -2,66 +2,98 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>test</title>
+	<title>Вебмастер Артём</title>
+	<meta name="title" content="Вебмастер Артём">
+	<meta name="description" content="Ваш надежный партнер в создании качественных сайтов. Использую современные технологии и креативный подход к каждому проекту">
+	<meta name="keywords" content="вебмастер Артём, веб-разработчик, веб-программирование, разработка сайтов, создание сайтов, веб-услуги, веб-оптимизация, SEO-оптимизация, сайт под ключ">
+	<link rel="preconnect" href="https://radrigofomins.github.io/Portfolio/" fetchpriority="high">
+	<meta property="og:type" content="article">
+	<meta property="og:site_name" content="Вебмастер Артём">
+	<meta property="og:title" content="Вебмастер Артём">
+	<meta property="og:description" content="Ваш надежный партнер в создании качественных сайтов. Использую современные технологии и креативный подход к каждому проекту">
+	<meta property="og:url" content="https://radrigofomins.github.io/Portfolio/">
+	<meta property="og:image" content="https://radrigofomins.github.io/Portfolio/images/fon/header_fon_08.webp">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="format-detection" content="address=no">
 	<meta name="HandheldFriendly" content="true">
 	<meta name="viewport" content="initial-scale=1.0, width=device-width">
-	<link rel="stylesheet" type="text/css" href="css/style.min.css?v=8">
+	<link rel="icon" type="image/png" href="/touch-icons/favicon-48x48.png" sizes="48x48" />
+	<link rel="icon" type="image/svg+xml" href="/touch-icons/favicon.svg" />
+	<link rel="shortcut icon" href="/touch-icons/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/touch-icons/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="Вебмастер Артём" />
+	<link rel="manifest" href="/touch-icons/site.webmanifest" />
+	<link rel="stylesheet" type="text/css" href="/css/style.min.css?v=10">
 </head>
 <body>
-	<div class="mob-menu"><button type="button" class="btn btn-menu"><i class="i_1"></i><i class="i_2"></i><i class="i_3"></i><span class="title_hide">Меню сайта</span></button></div>
+	<div class="mob-menu">
+		<div class="top"><i class="icon icon-logo"></i><span class="title_hide">На самый верх</span></div><button type="button" class="btn btn-menu"><i class="icon icon-menu"></i><span class="title_hide">Меню сайта</span></button>
+	</div>
 	<nav class="menu">
-		<div class="menu__close"><button type="button" class="btn btn-menu-close"><span class="title_hide">Меню сайта</span></button></div>
+		<div class="menu__close"><button type="button" class="btn btn-menu-close"><i class="icon icon-close"></i><span class="title_hide">Меню сайта</span></button></div>
 		<ul class="menu__nav">
+			<li class="top"><i class="icon icon-logo"></i><span class="title_hide">На самый верх</span></li>
 			<li><a class="scroll" href="#aboutme">Обо мне</a></li>
 			<li><a class="scroll" href="#services">Услуги</a></li>
 			<li><a class="scroll" href="#contacts">Контакты</a></li>
 		</ul>
 		<div class="menu__soc">
-			<a rel="nofollow" target="_blank" href="https://vk.com/korea_express">
-				<svg class="icon add-bookmarks">
-					<use xlink:href="images/icons.svg#vk" />
-				</svg>
+			<a rel="nofollow" target="_blank" href="https://vk.com/thegusevonline">
+				<i class="icon icon-vk"></i>
 				<span class="title_hide">Мы в ВКонтакте</span>
 			</a>
-			<a rel="nofollow" target="_blank" href="https://t.me/k_exs">
-				<svg class="icon add-bookmarks">
-					<use xlink:href="images/icons.svg#telegram" />
-				</svg>
+			<a rel="nofollow" target="_blank" href="">
+				<i class="icon icon-tg"></i>
 				<span class="title_hide">Мы в Telegram</span>
 			</a>
 		</div>
 	</nav>
-	<header class="header" data-parallax="scroll" data-image-src="images/fon/header_fon_08.webp">
+	<header class="header" data-parallax="scroll" data-image-src="/images/fon/01.webp">
 		<div class="header__content">
-			<img src="images/logo.png" alt="">
+			<img src="/images/logo.png" alt="">
 			<div>
-				<h1>Вебмастер Артём</h1>
-				<p>Ваш надежный партнер в создании качественных сайтов. Использую современные технологии и креативный подход к каждому проекту.</p>
+				<h1 data-animation="Вебмастер Артём">Вебмастер Артём</h1>
+				<p>Ваш надежный партнер в создании качественных сайтов. Использую современные технологии и креативный подход к каждому проекту.</p>
 			</div>
 		</div>
 	</header>
 	<main>
-		<section class="aboutme" id="aboutme">
-			<div>
+		<section class="section aboutme" id="aboutme">
+			<div class="title">
 				<h2>Обо мне</h2>
+				<div><i class="icon icon-mugs"></i></div>
+			</div>
+			<div>
+				<div class="section__img">
+					<div>
+						<div class="oki_1"><img loading="lazy" src="/images/obomne.webp" alt=""></div>
+						<div class="oki_2"><img loading="lazy" src="/images/obomne.webp" alt=""></div>
+					</div>
+				</div>
+				<div class="section__text">
+					<p>Здравствуйте! Меня зовут Артём, я&nbsp;веб-разработчик с&nbsp;опытом работы более 15&nbsp;лет. Моя специализация включает создание как одностраничных сайтов, так и&nbsp;многофункциональных проектов на&nbsp;базе популярной CMS DataLife Engine.</p>
+					<p>Имею знания HTML, CSS, JavaScript, PHP, а&nbsp;также опыт работы с&nbsp;популярными фреймворками, такими как Bootstrap и&nbsp;jQuery. Активно слежу за&nbsp;новыми технологиями и&nbsp;тенденциями в&nbsp;веб-разработке, чтобы предложить своим клиентам современные и&nbsp;эффективные решения.</p>
+					<p>Всегда готов обсудить ваши идеи и&nbsp;потребности, чтобы создать уникальный и&nbsp;качественный продукт, который будет соответствовать вашим ожиданиям.</p>
+					<p>Свяжитесь со&nbsp;мной, чтобы начать работу над вашим проектом уже сегодня!</p>
+				</div>
 			</div>
 		</section>
-		<section class="services" id="services">
-			<div>
-				<h2>Обо мне</h2>
+		<section class="section services" id="services">
+			<div class="title">
+				<h2>Услуги</h2>
+				<div><i class="icon icon-mugs"></i></div>
 			</div>
 		</section>
-		<section class="contacts" id="contacts">
-			<div>
-				<h2>Обо мне</h2>
+		<section class="section contacts" id="contacts">
+			<div class="title">
+				<h2>Контакты</h2>
+				<div><i class="icon icon-mugs"></i></div>
 			</div>
 		</section>
 	</main>
 	<footer></footer>
 	<script src="js/jquery-3.7.1.min.js"></script>
 	<script src="js/parallax.min.js"></script>
-	<script src="js/lib.js?v=9"></script>
+	<script src="js/lib.js?v=10"></script>
 </body>
 </html>
