@@ -404,7 +404,7 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1.3rem, 4.5vw, 1.5rem);
+  font-size: clamp(1.2rem, 4.2vw, 1.4rem);
 }
 
 ol,
@@ -787,7 +787,6 @@ ul {
 .section__img > div {
   position: relative;
   width: 100%;
-  padding-top: 130%;
   overflow: hidden;
 }
 
@@ -820,27 +819,31 @@ ul {
   z-index: 2;
 }
 
-.aboutme > div:not(.title) {
+.aboutme .section__img > div {
+  padding-top: 130%;
+}
+
+.aboutme__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 @media (min-width: 992px) {
-  .aboutme > div:not(.title) {
+  .aboutme__content {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .aboutme .section__img {
+  .aboutme__content .section__img {
     width: 360px;
   }
-  .aboutme .section__text {
+  .aboutme__content .section__text {
     width: calc(100% - 360px - 40px);
   }
 }
 @media (max-width: 991.98px) {
-  .aboutme > div:not(.title) {
+  .aboutme__content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -849,11 +852,11 @@ ul {
         -ms-flex-align: center;
             align-items: center;
   }
-  .aboutme .section__img {
+  .aboutme__content .section__img {
     width: 100%;
     max-width: 360px;
   }
-  .aboutme .section__text {
+  .aboutme__content .section__text {
     width: 100%;
     max-width: 600px;
     margin-top: 20px;
@@ -861,16 +864,132 @@ ul {
 }
 .services {
   background-color: #f6f7fa;
-  height: 800px;
 }
 
+.services__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.services__content section {
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 25px;
+  background-color: #fff;
+}
+.services__content .section__text {
+  font-size: 0.95rem;
+  margin-top: 15px;
+}
+.services__content h3 {
+  display: block;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.services__content h3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  height: 0;
+  border-top: solid 2px rgba(0, 0, 0, 0.12);
+}
+
+@media (min-width: 992px) {
+  .services__content {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .services__content section {
+    width: calc(50% - 15px);
+  }
+}
+@media (max-width: 991.98px) {
+  .services__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    max-width: 600px;
+  }
+  .services__content section:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
 .contacts {
-  height: 800px;
+  background-color: #2572ff;
+}
+.contacts .section__img > div {
+  padding-top: 100%;
+}
+.contacts .title h2,
+.contacts .title > div .icon {
+  color: #fff;
+}
+.contacts .title > div {
+  opacity: 0.5;
+}
+.contacts .title > div::after, .contacts .title > div::before {
+  background-color: #fff;
 }
 
+.contacts__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section__form iframe {
+  width: 100%;
+  height: 245px;
+  overflow: auto;
+}
+
+@media (min-width: 992px) {
+  .contacts__content {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contacts__content .section__img {
+    width: 360px;
+  }
+  .section__form {
+    width: calc(100% - 360px - 30px);
+  }
+}
+@media (max-width: 991.98px) {
+  .contacts__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contacts__content .section__img {
+    width: 100%;
+    max-width: 360px;
+  }
+  .section__form {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 25px;
+  }
+}
 footer {
   height: 500px;
   background-color: #2572ff;
+  border-top: 3px double rgba(255, 255, 255, 0.5);
 }
 
 .animation-element {

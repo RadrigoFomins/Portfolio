@@ -1,18 +1,17 @@
 .aboutme {
-	> div {
-		&:not(.title) {
-			display: flex;
+	.section__img {
+		> div {
+			padding-top: 130%;
 		}
 	}
 }
+.aboutme__content {
+	display: flex;
+}
 
 @media (min-width: 992px) {
-	.aboutme {
-		> div {
-			&:not(.title) {
-				justify-content: space-between;
-			}
-		}
+	.aboutme__content {
+		justify-content: space-between;
 		.section__img {
 			width: 360px;
 		}
@@ -23,13 +22,9 @@
 }
 
 @media (max-width: 991.98px) {
-	.aboutme {
-		> div {
-			&:not(.title) {
-				flex-direction: column;
-				align-items: center;
-			}
-		}
+	.aboutme__content {
+		flex-direction: column;
+		align-items: center;
 		.section__img {
 			width: 100%;
 			max-width: 360px;
