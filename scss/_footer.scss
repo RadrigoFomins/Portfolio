@@ -2,9 +2,18 @@ footer {
 	background-color: $color_blue;
 	border-top: 3px double rgba(255, 255, 255, 0.5);
 	padding-top: clm_px(40, 600, 60);
+	color: #fff;
+	a {
+		color: #fff;
+		text-decoration: underline;
+		&:hover,
+		&:focus-visible {
+			color: #fff;
+			text-decoration: none;
+		}
+	}
 }
 .footer__email{
-	color: #fff;
 	font-size: 1.2rem;
 	text-align: center;
 	text-transform: uppercase;

@@ -2,10 +2,9 @@
 	padding-top: clm_px(40, 600, 60);
 	padding-bottom: clm_px(40, 600, 60);
 	@extend %max_wight;
-	> div {
-		&:not(.title) {
-			margin-top: clm_px(20, 600, 40);
-		}
+	> div:not(.title),
+	> ul {
+		margin-top: clm_px(20, 600, 40);
 	}
 }
 .title {
@@ -25,9 +24,9 @@
 		}
 		&::after,
 		&::before {
-			content: '';
+			content: "";
 			display: block;
-			width: clm_px(40,600,50);
+			width: clm_px(40, 600, 50);
 			height: 2px;
 			background-color: $color_blue;
 		}
@@ -43,6 +42,12 @@
 .section__text {
 	> *:not(:first-child) {
 		margin-top: 0.9rem;
+	}
+	a {
+		&:not(:hover):not(:focus-visible) {
+			color: $color_link_hover;
+			text-decoration: underline;
+		}
 	}
 }
 .oki_1,
