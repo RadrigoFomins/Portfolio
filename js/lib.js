@@ -32,7 +32,7 @@ $(document).ready(function () {
 		$('body').append('<div class="menu-backdrop"></div>');
 		$('.menu-backdrop').fadeIn(200);
 	});
-	$('.btn-menu-close, .menu__nav a, .menu__nav .top .icon').click(function () {
+	$('.btn-menu-close, .menu__nav a, .menu__nav .top').click(function () {
 		functionCloseMenu();
 	});
 	$(document).click(function (event) {
