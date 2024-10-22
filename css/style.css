@@ -471,7 +471,7 @@ ul {
           justify-content: space-between;
   z-index: 998;
 }
-.mob-menu .top {
+.mob-menu .menu__top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -493,7 +493,7 @@ ul {
   display: flex;
 }
 
-.scrolled .top .icon {
+.scrolled .menu__top .icon {
   cursor: pointer;
 }
 .scrolled .mob-menu {
@@ -610,7 +610,7 @@ ul {
   .menu__nav a:hover::after {
     width: 100%;
   }
-  .menu__nav .top .icon {
+  .menu__nav .menu__top .icon {
     font-size: 1.8rem;
     color: #2572ff;
   }
@@ -655,10 +655,10 @@ ul {
     font-size: 1.1rem;
     color: #fff;
   }
-  .menu__nav .top {
+  .menu__nav .menu__top {
     text-align: center;
   }
-  .menu__nav .top .icon {
+  .menu__nav .menu__top .icon {
     font-size: 2.8rem;
     color: #fff;
   }
@@ -927,6 +927,9 @@ ul {
 .contacts {
   background-color: #2572ff;
 }
+.contacts > * {
+  max-width: 800px;
+}
 .contacts .section__img > div {
   padding-top: 100%;
 }
@@ -947,7 +950,7 @@ ul {
   display: flex;
 }
 
-.section__form iframe {
+.contacts__form iframe {
   width: 100%;
   height: 245px;
   overflow: auto;
@@ -960,10 +963,20 @@ ul {
             justify-content: space-between;
   }
   .contacts__content .section__img {
-    width: 360px;
+    width: 300px;
   }
-  .section__form {
-    width: calc(100% - 360px - 30px);
+  .contacts__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: calc(100% - 300px - 30px);
   }
 }
 @media (max-width: 991.98px) {
@@ -980,16 +993,100 @@ ul {
     width: 100%;
     max-width: 360px;
   }
-  .section__form {
+  .contacts__form {
     width: 100%;
-    max-width: 500px;
+    max-width: 460px;
     margin-top: 25px;
   }
 }
+.contacts__soc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 25px;
+}
+.contacts__soc a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  margin: 0 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.contacts__soc a:hover, .contacts__soc a:focus-visible {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.contacts__soc .icon {
+  font-size: 1.8rem;
+  margin-right: 10px;
+}
+
 footer {
-  height: 500px;
   background-color: #2572ff;
   border-top: 3px double rgba(255, 255, 255, 0.5);
+  padding-top: clamp(40px, 10vw, 60px);
+}
+
+.footer__email {
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.footer__scrol {
+  width: 80px;
+  height: 50px;
+  margin: clamp(25px, 7.5vw, 45px) auto 0;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.footer__scrol::after, .footer__scrol::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+  width: 30px;
+  height: 30px;
+  border-top: 2px solid rgba(255, 255, 255, 0.6);
+  border-left: 2px solid rgba(255, 255, 255, 0.6);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.footer__scrol::after {
+  top: 15px;
+}
+.footer__scrol::before {
+  top: 25px;
+}
+.footer__scrol:hover, .footer__scrol:focus-visible {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.footer__scrol:hover::after, .footer__scrol:hover::before, .footer__scrol:focus-visible::after, .footer__scrol:focus-visible::before {
+  border-top-color: #fff;
+  border-left-color: #fff;
 }
 
 .animation-element {

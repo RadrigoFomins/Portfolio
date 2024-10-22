@@ -50,7 +50,7 @@ $(document).ready(function () {
 		return false;
 	});
 	
-	$('.top .icon').click(function () {
+	$('.top').click(function () {
 		$('body,html').animate({
 			scrollTop: 0
 		}, 600);

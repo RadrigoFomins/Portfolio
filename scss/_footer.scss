@@ -1,5 +1,53 @@
 footer {
-	height: 500px;
 	background-color: $color_blue;
 	border-top: 3px double rgba(255, 255, 255, 0.5);
+	padding-top: clm_px(40, 600, 60);
+}
+.footer__email{
+	color: #fff;
+	font-size: 1.2rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+.footer__scrol {
+	width: 80px;
+	height: 50px;
+	margin: clm_px(25, 600, 45) auto 0;
+	border: 2px solid rgba(255, 255, 255, 0.8);
+	border-bottom: 0;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	transition: background-color  0.3s ease;
+	&::after,
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 50%;
+		margin-left: -15px;
+		width: 30px;
+		height: 30px;
+		border-top: 2px solid rgba(255, 255, 255, 0.6);
+		border-left: 2px solid rgba(255, 255, 255, 0.6);
+		transform: rotate(45deg);
+		transition: all  0.3s ease;
+	}
+	&::after {
+		top: 15px;
+	}
+	&::before {
+		top: 25px;
+	}
+	&:hover,
+	&:focus-visible {
+		background-color: rgba(255, 255, 255, 0.2);
+		&::after,
+		&::before {
+			border-top-color: #fff;
+			border-left-color: #fff;
+		}
+	}
 }
