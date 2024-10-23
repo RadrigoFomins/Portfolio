@@ -11,7 +11,7 @@
 	position: relative;
 	padding: 20px;
 	&::after {
-		content: '';
+		content: "";
 		display: block;
 		position: absolute;
 		left: 0;
@@ -21,6 +21,35 @@
 		background-image: url(../images/fon/01.webp);
 		background-size: cover;
 		z-index: -101;
+	}
+	> .scroll {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100px;
+		height: 60px;
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		margin-left: -50px;
+		text-align: center;
+		animation: arrowDown 1s ease-in-out infinite;
+		.icon {
+			font-size: 5rem;
+			color: #fff;
+			text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+		}
+	}
+}
+@keyframes arrowDown {
+	0% {
+		bottom: 0;
+	}
+	50% {
+		bottom: 5px;
+	}
+	100% {
+		bottom: 0;
 	}
 }
 .header__content {
@@ -32,11 +61,13 @@
 	background-color: rgba(255, 255, 255, 0.4);
 	max-width: 800px;
 	z-index: 2;
+	border-radius: 5px;
 	img {
 		display: block;
 		width: 100%;
 		max-width: 280px;
-		filter: drop-shadow(0 15px 10px rgba(0, 0, 0, 0.9));
+		filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+		border-radius: 5px;
 	}
 	h1 {
 		color: #fff;

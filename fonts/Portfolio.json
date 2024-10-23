@@ -2,7 +2,7 @@
   "metadata": {
     "name": "Portfolio",
     "lastOpened": 0,
-    "created": 1727043274598
+    "created": 1729710896233
   },
   "iconSets": [
     {
@@ -2501,10 +2501,13 @@
           "id": 341
         },
         {
-          "order": 0,
+          "order": 99,
           "ligatures": "keyboard_arrow_down",
-          "name": "keyboard_arrow_down",
-          "id": 342
+          "name": "arrow_down",
+          "id": 342,
+          "prevSize": 24,
+          "code": 59650,
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -2519,10 +2522,13 @@
           "id": 344
         },
         {
-          "order": 0,
+          "order": 98,
           "ligatures": "keyboard_arrow_up",
-          "name": "keyboard_arrow_up",
-          "id": 345
+          "name": "arrow_up",
+          "id": 345,
+          "prevSize": 24,
+          "code": 59651,
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -3176,7 +3182,7 @@
           "id": 451,
           "prevSize": 24,
           "code": 59649,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -4097,7 +4103,10 @@
           "order": 0,
           "ligatures": "expand_more",
           "name": "expand_more",
-          "id": 597
+          "id": 597,
+          "prevSize": 24,
+          "code": 59652,
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -4118,7 +4127,7 @@
           "id": 600,
           "prevSize": 24,
           "code": 59671,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -4210,8 +4219,11 @@
         {
           "order": 0,
           "ligatures": "arrow_forward_ios",
-          "name": "arrow_forward_ios",
-          "id": 615
+          "name": "arrow",
+          "id": 615,
+          "prevSize": 24,
+          "code": 59652,
+          "tempChar": ""
         },
         {
           "order": 0,

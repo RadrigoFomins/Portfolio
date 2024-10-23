@@ -10,7 +10,7 @@
 .mob-menu {
 	justify-content: space-between;
 	z-index: 998;
-	.menu__top {
+	.btn-top {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -24,7 +24,7 @@
 	display: flex;
 }
 .scrolled {
-	.menu__top {
+	.btn-top {
 		.icon {
 			cursor: pointer;
 		}
@@ -114,7 +114,7 @@
 				width: 100%;
 			}
 		}
-		.menu__top {
+		.btn-top {
 			.icon {
 				font-size: 1.8rem;
 				color: $color_blue;
@@ -149,7 +149,7 @@
 			font-size: 1.1rem;
 			color: #fff;
 		}
-		.menu__top {
+		.btn-top {
 			text-align: center;
 			.icon {
 				font-size: 2.8rem;

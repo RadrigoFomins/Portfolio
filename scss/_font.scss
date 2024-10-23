@@ -1,9 +1,9 @@
 @font-face {
 	font-family: "iconPortfolio";
 	src:
-		url("../fonts/iconPortfolio.ttf?mcd166") format("truetype"),
-		url("../fonts/iconPortfolio.woff?mcd166") format("woff"),
-		url("../fonts/iconPortfolio.svg?mcd166#iconPortfolio") format("svg");
+		url("../fonts/iconPortfolio.ttf?kdp9qi") format("truetype"),
+		url("../fonts/iconPortfolio.woff?kdp9qi") format("woff"),
+		url("../fonts/iconPortfolio.svg?kdp9qi#iconPortfolio") format("svg");
 	font-weight: normal;
 	font-style: normal;
 	font-display: block;
@@ -35,6 +35,12 @@
 }
 .icon-close:before {
 	content: "\e916";
+}
+.icon-arrow_down:before {
+	content: "\e902";
+}
+.icon-arrow_up:before {
+	content: "\e903";
 }
 .icon-mugs:before {
 	content: "\e901";
