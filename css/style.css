@@ -688,7 +688,7 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  padding: 20px;
+  padding: 20px 20px 65px;
 }
 .header::after {
   content: "";
