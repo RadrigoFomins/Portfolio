@@ -23,16 +23,16 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="touch-icons/apple-touch-icon.png" />
 	<meta name="apple-mobile-web-app-title" content="Вебмастер Артём" />
 	<link rel="manifest" href="touch-icons/site.webmanifest" />
-	<link rel="stylesheet" type="text/css" href="css/style.min.css?v=18">
+	<link rel="stylesheet" type="text/css" href="css/style.min.css?v=22">
 </head>
 <body>
 	<div class="mob-menu">
-		<div class="btn-top"><i class="icon icon-logo top"></i><span class="title_hide">На самый верх</span></div><button type="button" class="btn btn-menu"><i class="icon icon-menu"></i><span class="title_hide">Меню сайта</span></button>
+		<div class="btn-top"><a class="scroll" href="#top"><i class="icon icon-logo" tabindex="-1"></i><span class="title_hide">На самый верх</span></a></div><button type="button" class="btn btn-menu" data-toggle="modal" data-target="menuModal"><i class="icon icon-menu"></i><span class="title_hide">Меню сайта</span></button>
 	</div>
-	<nav class="menu">
-		<div class="menu__close"><button type="button" class="btn btn-menu-close"><i class="icon icon-close"></i><span class="title_hide">Меню сайта</span></button></div>
+	<nav id="menuModal" class="modal menu" tabindex="-1" aria-hidden="true">
+		<div class="menu__close"><button type="button" class="btn btn-menu-close"><i class="icon icon-close"></i><span class="title_hide">Закрыть меню</span></button></div>
 		<ul class="menu__nav">
-			<li class="btn-top"><i class="icon icon-logo top"></i><span class="title_hide">На самый верх</span></li>
+			<li class="btn-top"><a class="scroll" href="#top"><i class="icon icon-logo"></i><span class="title_hide">На самый верх</span></a></li>
 			<li><a class="scroll" href="#aboutme">Обо мне</a></li>
 			<li><a class="scroll" href="#services">Услуги</a></li>
 			<li><a class="scroll" href="#contacts">Контакты</a></li>
@@ -48,7 +48,7 @@
 			</a>
 		</div>
 	</nav>
-	<header class="header" data-parallax="scroll" data-image-src="images/fon/01.webp">
+	<header id="top" class="header" data-parallax="scroll" data-image-src="images/fon/01.webp">
 		<div class="header__content">
 			<img src="images/logo_02.webp" alt="">
 			<div>
@@ -159,13 +159,15 @@
 	</main>
 	<footer class="footer">
 		<div class="footer__email">Email: <a href="mailto:f-o-m@mail.ru">f-o-m@mail.ru</a></div>
-		<div class="footer__scrol top">
+		<a class="footer__scrol scroll" href="#top">
+			<i class="icon icon-arrow_up"></i>
+			<i class="icon icon-arrow_up"></i>
 			<span class="title_hide">В самый верх</span>
-		</div>
+		</a>
 	</footer>
 	<script src="js/jquery-3.7.1.min.js"></script>
 	<script src="js/parallax.min.js"></script>
 	<script src="js/fancybox.umd.js"></script>
-	<script src="js/lib.js?v=12"></script>
+	<script src="js/lib.js?v=15"></script>
 </body>
 </html>
