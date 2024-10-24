@@ -6,29 +6,43 @@
 }
 .menu {
 	z-index: 1000;
+	a,
+	.btn {
+		@extend %focus_white;
+	}
+	.btn {
+		@extend %focus_inside;
+	}
 }
 .mob-menu {
 	justify-content: space-between;
 	z-index: 998;
 	.btn-top {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: $header_nav;
-		width: $header_nav;
-		color: $color_blue;
-		font-size: 2rem;
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: $header_nav;
+			width: $header_nav;
+			color: $color_blue;
+			line-height: 1;
+			@extend %focus_inside;
+		}
+		.icon {
+			font-size: 2rem;
+		}
 	}
 }
 .menu__nav {
 	display: flex;
-}
-.scrolled {
 	.btn-top {
-		.icon {
-			cursor: pointer;
+		a {
+			display: inline-block;
+			line-height: 1;
 		}
 	}
+}
+.scrolled {
 	.mob-menu {
 		box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
 	}
@@ -40,6 +54,7 @@
 	width: 60px;
 	height: $header_nav;
 	font-size: 2rem;
+	@extend %focus_inside;
 }
 
 .menu__close {
@@ -55,7 +70,7 @@
 	font-size: 1.8rem;
 	color: #fff;
 }
-.menu-backdrop {
+.modal-backdrop {
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -74,11 +89,12 @@
 		color: #fff;
 		font-size: 2rem;
 		padding: 10px 15px;
+		@extend %focus_inside;
 	}
 }
 
 @media (min-width: 992px) {
-	.menu-backdrop,
+	.modal-backdrop,
 	.mob-menu,
 	.menu > *:not(.menu__nav) {
 		display: none !important;
@@ -95,7 +111,7 @@
 		li {
 			padding: 0 30px;
 		}
-		a {
+		a:not([href="#top"]) {
 			display: block;
 			padding: 3px;
 			position: relative;
@@ -145,7 +161,7 @@
 		li {
 			padding: 5px 20px;
 		}
-		a {
+		a:not([href="#top"]) {
 			font-size: 1.1rem;
 			color: #fff;
 		}

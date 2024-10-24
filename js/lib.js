@@ -8,52 +8,94 @@ $(document).ready(function () {
 		}
 	});
 });
-// Мобильное меню
+
+// modal
 $(document).ready(function () {
-	function functionCloseMenu() {
-		$('.menu.show').css({ 'transform': '', 'transition': 'transform 0.3s ease' });
+	// Функция Фокуса в модальном окне
+	function trapFocus(boxModal) {
+		boxModal.on('keydown', function (e) {
+			var focusableElements = boxModal.find('a[href], button');
+			var firstElement = focusableElements.first();
+			var lastElement = focusableElements.last();
+			if (e.key === 'Tab') {
+				if (e.shiftKey) {
+					if (document.activeElement === firstElement[0]) {
+						e.preventDefault();
+						lastElement.focus();
+					}
+				} else {
+					if (document.activeElement === lastElement[0]) {
+						e.preventDefault();
+						firstElement.focus();
+					}
+				}
+			} else if (e.key === 'Escape') {
+				functionClose();
+			}
+		});
+	}
+	// Функция закрытия модального окна
+	function functionClose() {
+		// Получаем кнопку, которая открыла модальное окно
+		var lastFocusedBtn = $('.modal').data('lastFocusedBtn');
+		$('.modal')
+			.attr('aria-hidden', 'true')
+			.removeAttr('aria-modal')
+			.removeAttr('role');
+		$('.modal.show').css({ 'transform': '', 'transition': 'transform 0.3s ease' });
 		setTimeout(function () {
-			$('.menu-backdrop').fadeOut(200);
+			$('.modal-backdrop').fadeOut(200);
 		}, 150);
 		setTimeout(function () {
-			$('.menu')
+			$('.modal')
 				.css('transition', '')
 				.removeClass('show');
-			$('.menu-backdrop').remove();
+			$('.modal-backdrop').remove();
 		}, 350);
+
+		if (lastFocusedBtn) {
+			lastFocusedBtn.focus();
+		}
 	}
-	$('.btn-menu').click(function () {
-		$('.menu')
+
+	$('[data-toggle="modal"]').click(function () {
+		var target = $(this).data('target');
+		var modalId = $('#' + target);
+		modalId
 			.css({ 'transform': 'translateX(0)', 'transition': 'transform 0.3s ease' })
+			.removeAttr('aria-hidden')
+			.attr('aria-modal', 'true')
+			.attr('role', 'dialog')
 			.addClass('show');
 		setTimeout(function () {
 			$('.menu').css('transition', '');
+			trapFocus(modalId);
 		}, 300);
-		$('body').append('<div class="menu-backdrop"></div>');
-		$('.menu-backdrop').fadeIn(200);
+		$('body').append('<div class="modal-backdrop"></div>');
+		$('.modal-backdrop').fadeIn(200);
+		// Сохраняем кнопку, чтобы вернуть на неё фокус после закрытия
+		var lastFocusedBtn = $(this);
+		$('.modal').data('lastFocusedBtn', lastFocusedBtn);
 	});
-	$('.btn-menu-close, .menu__nav a, .menu__nav .top').click(function () {
-		functionCloseMenu();
+
+	$('.btn-menu-close').click(function () {
+		functionClose();
 	});
-	$(document).click(function (event) {
-		if (!$(event.target).closest('.menu').length && !$(event.target).closest('.btn-menu').length) {
-			functionCloseMenu();
+	// Закрытие модального окна при клике вне его
+	$(document).on('click', function (e) {
+		if ($(e.target).is('.modal-backdrop')) {
+			functionClose();
 		}
 	});
+
 });
+
 // Плавный скроллинг к якорю
 $(document).ready(function () {
 	$("a.scroll").click(function () {
 		elementClick = $(this).attr("href")
-		destination = $(elementClick).offset().top - 50;
+		destination = $(elementClick).offset().top - 60;
 		$("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 600);
-		return false;
-	});
-	
-	$('.top').click(function () {
-		$('body,html').animate({
-			scrollTop: 0
-		}, 600);
 		return false;
 	});
 });
