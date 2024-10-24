@@ -949,6 +949,7 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
   }
   .aboutme__content .section__text {
     width: 100%;
+    max-width: 600px;
     margin-top: 20px;
   }
 }
@@ -957,9 +958,9 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
 }
 
 .services__content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: clamp(20px, 3.75vw, 30px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .services__content section {
   border: solid 1px rgba(0, 0, 0, 0.1);
@@ -988,10 +989,40 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
   border-top: solid 2px rgba(0, 0, 0, 0.12);
 }
 
+@media (min-width: 992px) {
+  .services__content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .services__content section {
+    width: calc(50% - 15px);
+  }
+}
+@media (max-width: 991.98px) {
+  .services__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .services__content section {
+    width: 100%;
+    max-width: 600px;
+  }
+  .services__content section:nth-child(n+2) {
+    margin-top: 20px;
+  }
+}
 .works__content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: clamp(20px, 3.75vw, 30px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .works__content a,
 .works__content img {
@@ -1011,6 +1042,39 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
   text-decoration: underline;
 }
 
+@media (min-width: 992px) {
+  .works__content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .works__content li {
+    width: calc(50% - 15px);
+  }
+  .works__content li:nth-child(n+3) {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 991.98px) {
+  .works__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .works__content li {
+    width: 100%;
+    max-width: 600px;
+  }
+  .works__content li:not(:first-child) {
+    margin-top: 20px;
+  }
+}
 .contacts {
   background-color: #2572ff;
 }
@@ -2972,8 +3036,8 @@ html.with-fancybox body.hide-scrollbar {
           transform: scale(1);
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease;
-  -webkit-transition-duration: 0.6s;
-          transition-duration: 0.6s;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
   -webkit-transition-property: opacity, background-color, -webkit-transform;
   transition-property: opacity, background-color, -webkit-transform;
   transition-property: opacity, transform, background-color;
@@ -2984,16 +3048,16 @@ html.with-fancybox body.hide-scrollbar {
 
 @media (min-width: 992px) {
   .animation-element.animation-element-left {
-    -webkit-transform: scale(0.9) translate(-20%, 0);
-            transform: scale(0.9) translate(-20%, 0);
+    -webkit-transform: scale(0.9) translate(-15%, 0);
+            transform: scale(0.9) translate(-15%, 0);
   }
   .animation-element.animation-element-right {
-    -webkit-transform: scale(0.9) translate(20%, 0);
-            transform: scale(0.9) translate(20%, 0);
+    -webkit-transform: scale(0.9) translate(15%, 0);
+            transform: scale(0.9) translate(15%, 0);
   }
   .animation-element.animation-element-bottom {
-    -webkit-transform: scale(0.9) translate(0, 20%);
-            transform: scale(0.9) translate(0, 20%);
+    -webkit-transform: scale(0.9) translate(0, 15%);
+            transform: scale(0.9) translate(0, 15%);
   }
   .animation-element.animation-element-left.animation-show,
   .animation-element.animation-element-right.animation-show,
