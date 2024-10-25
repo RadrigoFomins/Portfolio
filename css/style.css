@@ -720,7 +720,7 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../images/fon/01.webp);
+  background: url(../images/fon/07.webp) 50% 50% no-repeat;
   background-size: cover;
   z-index: -101;
 }
@@ -790,7 +790,7 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   padding: clamp(30px, 6.66667vw, 60px);
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.7);
   max-width: 800px;
   z-index: 2;
   border-radius: 5px;
@@ -835,14 +835,11 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
   padding-top: clamp(40px, 10vw, 60px);
   padding-bottom: clamp(40px, 10vw, 60px);
 }
-.section > div:not(.title),
-.section > ul {
-  margin-top: clamp(20px, 6.66667vw, 40px);
-}
 
 .title {
   width: 100%;
   text-align: center;
+  margin-bottom: clamp(20px, 6.66667vw, 40px);
 }
 .title h2 {
   text-transform: uppercase;
@@ -1073,6 +1070,34 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
   }
   .works__content li:not(:first-child) {
     margin-top: 20px;
+  }
+}
+.prices {
+  position: relative;
+}
+.prices > div {
+  padding: clamp(30px, 6.66667vw, 60px);
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+.prices::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/fon/10.webp) 50% 50% no-repeat;
+  background-size: cover;
+  z-index: -101;
+}
+
+@media (max-width: 991.98px) {
+  .prices > div {
+    max-width: 600px;
   }
 }
 .contacts {

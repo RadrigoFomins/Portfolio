@@ -2,14 +2,11 @@
 	padding-top: clm_px(40, 600, 60);
 	padding-bottom: clm_px(40, 600, 60);
 	@extend %max_wight;
-	> div:not(.title),
-	> ul {
-		margin-top: clm_px(20, 600, 40);
-	}
 }
 .title {
 	width: 100%;
 	text-align: center;
+	margin-bottom: clm_px(20, 600, 40);
 	h2 {
 		text-transform: uppercase;
 	}
