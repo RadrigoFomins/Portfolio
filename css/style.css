@@ -1021,6 +1021,9 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
   display: -ms-flexbox;
   display: flex;
 }
+.works__content li {
+  border-radius: 20px;
+}
 .works__content a,
 .works__content img {
   display: block;
@@ -1029,7 +1032,16 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
 .works__content a {
   border-radius: 20px;
   overflow: hidden;
-  border: solid 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+.works__content a:hover, .works__content a:focus-visible {
+  -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
 
 .fancybox__caption a {
