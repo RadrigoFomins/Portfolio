@@ -78,7 +78,7 @@ $(document).ready(function () {
 		$('.modal').data('lastFocusedBtn', lastFocusedBtn);
 	});
 
-	$('.btn-menu-close').click(function () {
+	$('.btn-menu-close, .menu__nav a').click(function () {
 		functionClose();
 	});
 	// Закрытие модального окна при клике вне его
