@@ -1,9 +1,4 @@
 .header {
-	/*
-	background-color: #fff;
-	background-image: url(../images/fon/header_fon_08.webp?v=1);
-	background-size: cover;
-	*/
 	min-height: calc(100vh - $header_nav);
 	display: flex;
 	justify-content: center;
@@ -76,7 +71,7 @@
 		max-width: 280px;
 		filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 		border-radius: 5px;
-		animation: hecon 0.8s ease-out;
+//		animation: hecon 0.8s ease-out;
 	}
 	h1 {
 		color: #fff;
@@ -97,7 +92,7 @@
 		margin-top: 10px;
 	}
 }
-
+/*
 @keyframes hecon {
 	0% {
 		transform: scale(1);
@@ -133,6 +128,7 @@
 		transform: scale(1);
 	}
 }
+*/
 
 @media (min-width: 992px) {
 	.header__content {
