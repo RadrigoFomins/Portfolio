@@ -1,6 +1,7 @@
 .section {
 	padding-top: clm_px(40, 600, 60);
 	padding-bottom: clm_px(40, 600, 60);
+	overflow: hidden;
 	@extend %max_wight;
 }
 .title {

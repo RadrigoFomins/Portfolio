@@ -5,9 +5,9 @@
 .animation-element.animation-show {
 	opacity: 1;
 	transform: scale(1);
-	transition-timing-function: ease;
-	transition-duration: 0.5s;
-	transition-property: opacity, transform, background-color;
+	transition-timing-function: ease-out;
+	transition-duration: 0.3s;
+	transition-property: opacity, transform;
 	transition-delay: 0.3s;
 }
 
@@ -18,11 +18,15 @@
 	.animation-element.animation-element-right {
 		transform: scale(0.9) translate(15%, 0);
 	}
+	.animation-element.animation-element-top {
+		transform: scale(0.9) translate(0, -20px);
+	}
 	.animation-element.animation-element-bottom {
-		transform: scale(0.9) translate(0, 15%);
+		transform: scale(0.9) translate(0, 20px);
 	}
 	.animation-element.animation-element-left.animation-show,
 	.animation-element.animation-element-right.animation-show,
+	.animation-element.animation-element-top.animation-show,
 	.animation-element.animation-element-bottom.animation-show {
 		transform: scale(1) translate(0);
 	}
