@@ -68,7 +68,6 @@ $(document).ready(function () {
 			.attr('role', 'dialog')
 			.addClass('show');
 		setTimeout(function () {
-			$('.menu').css('transition', '');
 			trapFocus(modalId);
 		}, 300);
 		$('body').append('<div class="modal-backdrop"></div>');
