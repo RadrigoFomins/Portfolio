@@ -9,6 +9,11 @@
 html {
 	min-height: 100%;
 }
+@keyframes scroll-progress {
+	to {
+		width: 100%;
+	}
+}
 body {
 	min-height: 100%;
 	min-width: 320px;
@@ -17,6 +22,21 @@ body {
 	overflow-x: hidden;
 	outline: 0;
 	background-color: #fff;
+	&::before {
+		content: '';
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 3px;
+		width: 0;
+		background-color: orange;
+		z-index: 1001;
+		animation-name: scroll-progress;
+		animation-timing-function: linear;
+		animation-timeline: scroll();
+		pointer-events: none;
+	}
 }
 body,
 select,
