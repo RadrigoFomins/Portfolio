@@ -8,6 +8,22 @@
 }
 html {
 	min-height: 100%;
+	overflow-y: auto;
+	scroll-snap-type: y proximity;
+	/* Для Firefox */
+	scrollbar-width: thin;
+	scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+	/* Для WebKit (Chrome, Safari и Edge) */
+	&::-webkit-scrollbar {
+		width: 8px;
+	}
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: rgba(0, 0, 0, 0.15);
+		border-radius: 4px;
+	}
 }
 @keyframes scroll-progress {
 	to {
@@ -18,12 +34,11 @@ body {
 	min-height: 100%;
 	min-width: 320px;
 	max-width: 100vw;
-	overflow-y: scroll;
 	overflow-x: hidden;
 	outline: 0;
 	background-color: #fff;
 	&::before {
-		content: '';
+		content: "";
 		display: block;
 		position: fixed;
 		top: 0;
