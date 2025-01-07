@@ -74,21 +74,12 @@
 //		animation: hecon 0.8s ease-out;
 	}
 	h1 {
-		color: #fff;
 		text-shadow:
-			0 0 5px rgba(0, 0, 0, 0.4),
-			-1px -1px 0 #9c9c9c,
-			0 -1px 0 #9c9c9c,
-			1px -1px 0 #9c9c9c,
-			1px 0 0 #9c9c9c,
-			1px 1px 0 #9c9c9c,
-			0 1px 0 #9c9c9c,
-			-1px 1px 0 #9c9c9c,
-			-1px 0 0 #9c9c9c;
+			0 0 5px rgba(0, 0, 0, 0.3);
 	}
 	p {
 		color: #000;
-		text-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
+//		text-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
 		margin-top: 10px;
 	}
 }

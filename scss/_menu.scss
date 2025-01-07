@@ -110,11 +110,16 @@
 		align-items: center;
 		li {
 			padding: 0 30px;
+			&:not(.btn-top) {
+				height: 100%
+			}
 		}
 		a:not([href="#top"]) {
-			display: block;
+			display: flex;
+			align-items: center;
 			padding: 3px;
 			position: relative;
+			height: 100%;
 			&::after {
 				content: "";
 				display: block;
