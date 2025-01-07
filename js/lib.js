@@ -133,3 +133,24 @@ $(document).ready(function () {
 		animOnScroll();
 	}
 });
+
+/*
+$(document).ready(function () {
+	$.fn.animate_Text = function () {
+		var string = this.text();
+		return this.each(function () {
+			var $this = $(this);
+			$this.html(string.replace(/./g, '<span class="new">$&</span>'));
+			$this.find('span.new').each(function (i, el) {
+				setTimeout(function () { $(el).addClass('div_opacity'); }, 20 * i);
+			});
+		});
+	};
+	$('#header-h1').css({ 'opacity': '1' });
+	$('#header-h1').animate_Text();
+	setTimeout(function () {
+		$('#header-text').css({ 'opacity': '1' });
+		$('#header-text').animate_Text();
+	}, 400);
+});
+*/
