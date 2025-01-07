@@ -1092,9 +1092,6 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
   text-align: center;
   margin-bottom: clamp(20px, 6.66667vw, 40px);
 }
-.title h2 {
-  text-transform: uppercase;
-}
 .title > div {
   display: -webkit-box;
   display: -ms-flexbox;
