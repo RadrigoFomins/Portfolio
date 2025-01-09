@@ -1028,8 +1028,8 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
   display: block;
   width: 100%;
   max-width: 280px;
-  -webkit-filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-          filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
 .header__content h1 {
