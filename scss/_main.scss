@@ -32,6 +32,26 @@
 		position: relative;
 		width: 100%;
 		overflow: hidden;
+		img {
+			width: 91%;
+			height: 95%;
+			overflow: hidden;
+			border-top-left-radius: 2rem;
+			border-bottom-right-radius: 2rem;
+			@extend %img_pozition;
+			&:nth-child(1) {
+				bottom: 0;
+				right: 0;
+				z-index: 1;
+				filter: sepia(100%);
+				opacity: 0.6;
+			}
+			&:nth-child(2) {
+				top: 0;
+				left: 0;
+				z-index: 2;
+			}
+		}
 	}
 }
 .section__text {
@@ -44,26 +64,4 @@
 			text-decoration: underline;
 		}
 	}
-}
-.oki_1,
-.oki_2 {
-	position: absolute;
-	width: 91%;
-	height: 95%;
-	overflow: hidden;
-	border-top-left-radius: 2rem;
-	border-bottom-right-radius: 2rem;
-	@extend %img_pozition;
-}
-.oki_1 {
-	bottom: 0;
-	right: 0;
-	z-index: 1;
-	filter: sepia(100%);
-	opacity: 0.6;
-}
-.oki_2 {
-	top: 0;
-	left: 0;
-	z-index: 2;
 }
