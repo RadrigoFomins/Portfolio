@@ -691,7 +691,7 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
   background: transparent;
 }
 
-.section__img > div img {
+.section__img img {
   display: block;
   position: absolute;
   -o-object-fit: cover;
@@ -1100,19 +1100,18 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
   background-color: #2572ff;
 }
 
-.section__img > div {
+.section__img {
   position: relative;
-  width: 100%;
   overflow: hidden;
 }
-.section__img > div img {
+.section__img img {
   width: 91%;
   height: 95%;
   overflow: hidden;
   border-top-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
 }
-.section__img > div img:nth-child(1) {
+.section__img img:nth-child(1) {
   bottom: 0;
   right: 0;
   z-index: 1;
@@ -1120,7 +1119,7 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
           filter: sepia(100%);
   opacity: 0.6;
 }
-.section__img > div img:nth-child(2) {
+.section__img img:nth-child(2) {
   top: 0;
   left: 0;
   z-index: 2;
@@ -1134,7 +1133,7 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
   text-decoration: underline;
 }
 
-.aboutme .section__img > div {
+.aboutme .section__img {
   aspect-ratio: 10/13;
 }
 
@@ -1345,7 +1344,7 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
 .contacts > * {
   max-width: 800px;
 }
-.contacts .section__img > div {
+.contacts .section__img {
   aspect-ratio: 1/1;
 }
 .contacts .title h2,

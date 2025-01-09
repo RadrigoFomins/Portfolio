@@ -28,29 +28,26 @@
 	}
 }
 .section__img {
-	> div {
-		position: relative;
-		width: 100%;
+	position: relative;
+	overflow: hidden;
+	img {
+		width: 91%;
+		height: 95%;
 		overflow: hidden;
-		img {
-			width: 91%;
-			height: 95%;
-			overflow: hidden;
-			border-top-left-radius: 2rem;
-			border-bottom-right-radius: 2rem;
-			@extend %img_pozition;
-			&:nth-child(1) {
-				bottom: 0;
-				right: 0;
-				z-index: 1;
-				filter: sepia(100%);
-				opacity: 0.6;
-			}
-			&:nth-child(2) {
-				top: 0;
-				left: 0;
-				z-index: 2;
-			}
+		border-top-left-radius: 2rem;
+		border-bottom-right-radius: 2rem;
+		@extend %img_pozition;
+		&:nth-child(1) {
+			bottom: 0;
+			right: 0;
+			z-index: 1;
+			filter: sepia(100%);
+			opacity: 0.6;
+		}
+		&:nth-child(2) {
+			top: 0;
+			left: 0;
+			z-index: 2;
 		}
 	}
 }
