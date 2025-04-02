@@ -11,87 +11,86 @@ $(document).ready(function () {
 
 // modal
 $(document).ready(function () {
-	// Функция Фокуса в модальном окне
-	function trapFocus(boxModal) {
-		boxModal.on('keydown', function (e) {
-			var focusableElements = boxModal.find('a[href], button');
-			var firstElement = focusableElements.first();
-			var lastElement = focusableElements.last();
+	// Функция управления фокусом
+	function trapFocus(modal) {
+		const focusableElements = modal.find('a[href], button');
+		const firstElement = focusableElements.first();
+		const lastElement = focusableElements.last();
+		modal.on('keydown', function (e) {
 			if (e.key === 'Tab') {
-				if (e.shiftKey) {
-					if (document.activeElement === firstElement[0]) {
-						e.preventDefault();
-						lastElement.focus();
-					}
-				} else {
-					if (document.activeElement === lastElement[0]) {
-						e.preventDefault();
-						firstElement.focus();
-					}
+				if (e.shiftKey && document.activeElement === firstElement[0]) {
+					e.preventDefault();
+					lastElement.focus();
+				} else if (!e.shiftKey && document.activeElement === lastElement[0]) {
+					e.preventDefault();
+					firstElement.focus();
 				}
 			} else if (e.key === 'Escape') {
-				functionClose();
+				closeModal();
 			}
 		});
 	}
 
 	// Функция закрытия модального окна
-	function functionClose() {
-		// Получаем кнопку, которая открыла модальное окно
-		var lastFocusedBtn = $('.modal').data('lastFocusedBtn');
+	function closeModal() {
+		const lastFocusedBtn = $('.modal').data('lastFocusedBtn');
+
 		$('.modal')
 			.attr('aria-hidden', 'true')
-			.removeAttr('aria-modal')
-			.removeAttr('role');
-		$('.modal.show').css({ 'transform': '', 'transition': 'transform 0.3s ease' });
-		setTimeout(function () {
-			$('.modal-backdrop').fadeOut(200);
-		}, 150);
-		setTimeout(function () {
+			.removeAttr('aria-modal role');
+
+		$('.modal.show').css({
+			transform: '',
+			transition: 'transform 0.3s ease'
+		});
+
+		$('.modal-backdrop').fadeOut(200, function () {
 			$('.modal')
 				.css('transition', '')
 				.removeClass('show');
-			$('.modal-backdrop').remove();
-		}, 350);
+			$(this).remove();
+		});
 
 		if (lastFocusedBtn) {
 			lastFocusedBtn.focus();
 		}
 	}
 
-	$('[data-toggle="modal"]').click(function () {
-		var target = $(this).data('target');
-		var modalId = $('#' + target);
-		modalId
-			.css({ 'transform': 'translateX(0)', 'transition': 'transform 0.3s ease' })
+	// Оптимизация обработки открытия модального окна
+	$('[data-toggle="modal"]').on('click', function () {
+		const target = $(this).data('target');
+		const modal = $('#' + target);
+
+		modal
+			.css({
+				transform: 'translateX(0)',
+				transition: 'transform 0.3s ease'
+			})
 			.removeAttr('aria-hidden')
-			.attr('aria-modal', 'true')
-			.attr('role', 'dialog')
+			.attr({
+				'aria-modal': 'true',
+				role: 'dialog'
+			})
 			.addClass('show');
-		setTimeout(function () {
-			trapFocus(modalId);
-		}, 300);
+
 		$('body').append('<div class="modal-backdrop"></div>');
 		$('.modal-backdrop').fadeIn(200);
-		// Сохраняем кнопку, чтобы вернуть на неё фокус после закрытия
-		var lastFocusedBtn = $(this);
-		$('.modal').data('lastFocusedBtn', lastFocusedBtn);
+
+		// Сохраняем ссылку на кнопку
+		$('.modal').data('lastFocusedBtn', $(this));
+
+		// Задержка для trapFocus
+		setTimeout(() => trapFocus(modal), 300);
 	});
 
-	$('.btn-menu-close, .menu:not(.desktop) .menu__nav a').click(function () {
-		functionClose();
-	});
+	// Объединение обработчиков закрытия
+	$('.btn-menu-close, #menuModal .menu__nav a, .modal-backdrop').on('click', closeModal);
 
-	// Закрытие модального окна при клике вне его
+	// Оптимизация обработчика клика за пределами модального окна
 	$(document).on('click', function (e) {
 		if ($(e.target).is('.modal-backdrop')) {
-			functionClose();
+			closeModal();
 		}
-	});
-
-	// Добавляем обработчик для предотвращения закрытия при клике внутри окна
-	$('.modal-content').click(function (e) {
-		e.stopPropagation();
 	});
 });
 

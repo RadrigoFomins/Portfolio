@@ -670,7 +670,7 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
   outline-color: #fff;
 }
 
-.header > .scroll:focus-visible, .menu__soc a:focus-visible, .btn-menu:focus-visible, .mob-menu .btn-top a:focus-visible, .menu .btn:focus-visible {
+.header > .scroll:focus-visible, .menu__soc a:focus-visible, .menu .btn:focus-visible, .btn-menu:focus-visible, .mob-menu .btn-top a:focus-visible {
   outline-offset: -2px;
 }
 
@@ -708,9 +708,6 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
   background-color: #fff;
 }
 
-.menu {
-  z-index: 1000;
-}
 .mob-menu {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -766,15 +763,6 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
   font-size: 2rem;
 }
 
-.menu__close {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
 .btn-menu-close {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -802,6 +790,105 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
   display: none;
 }
 
+.menu {
+  z-index: 1000;
+}
+.menu:not(#menuModal) .menu__nav {
+  height: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.menu:not(#menuModal) .menu__nav li {
+  padding: 0 30px;
+}
+.menu:not(#menuModal) .menu__nav li:not(.btn-top) {
+  height: 100%;
+}
+.menu:not(#menuModal) .menu__nav a:not([href="#top"]) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3px;
+  position: relative;
+  height: 100%;
+}
+.menu:not(#menuModal) .menu__nav a:not([href="#top"])::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #2572ff;
+  -webkit-transition: width 0.2s ease;
+  transition: width 0.2s ease;
+}
+.menu:not(#menuModal) .menu__nav a:not([href="#top"]):hover::after {
+  width: 100%;
+}
+.menu:not(#menuModal) .menu__nav .btn-top .icon {
+  font-size: 1.8rem;
+  color: #2572ff;
+}
+.menu#menuModal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  min-width: 260px;
+  height: 100%;
+  background-color: #2572ff;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  overflow-y: auto;
+}
+.menu#menuModal .menu__nav {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.menu#menuModal .menu__nav li {
+  padding: 5px 20px;
+}
+.menu#menuModal .menu__nav a:not([href="#top"]) {
+  font-size: 1.1rem;
+  color: #fff;
+}
+.menu#menuModal .menu__nav .btn-top {
+  text-align: center;
+}
+.menu#menuModal .menu__nav .btn-top .icon {
+  font-size: 2.8rem;
+  color: #fff;
+}
+
+.menu__close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .menu__soc {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -819,111 +906,24 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
 }
 
 @media (min-width: 992px) {
-  .menu:not(.desktop),
+  .menu#menuModal,
   .modal-backdrop,
-  .mob-menu,
-  .menu > *:not(.menu__nav) {
+  .mob-menu {
     display: none !important;
   }
   .scrolled .menu {
     -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
             box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
   }
-  .menu__nav {
-    height: 60px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .menu__nav li {
-    padding: 0 30px;
-  }
-  .menu__nav li:not(.btn-top) {
-    height: 100%;
-  }
-  .menu__nav a:not([href="#top"]) {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 3px;
-    position: relative;
-    height: 100%;
-  }
-  .menu__nav a:not([href="#top"])::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    width: 0;
-    background-color: #2572ff;
-    -webkit-transition: width 0.2s ease;
-    transition: width 0.2s ease;
-  }
-  .menu__nav a:not([href="#top"]):hover::after {
-    width: 100%;
-  }
-  .menu__nav .btn-top .icon {
-    font-size: 1.8rem;
-    color: #2572ff;
-  }
 }
 @media (max-width: 991.98px) {
-  .menu.desktop {
+  .menu:not(#menuModal) {
     display: none !important;
   }
   .mob-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-  .menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    position: fixed;
-    top: 0;
-    right: 0;
-    min-width: 260px;
-    height: 100%;
-    background-color: #2572ff;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    overflow-y: auto;
-  }
-  .menu__nav {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-  .menu__nav li {
-    padding: 5px 20px;
-  }
-  .menu__nav a:not([href="#top"]) {
-    font-size: 1.1rem;
-    color: #fff;
-  }
-  .menu__nav .btn-top {
-    text-align: center;
-  }
-  .menu__nav .btn-top .icon {
-    font-size: 2.8rem;
-    color: #fff;
   }
 }
 .header {
