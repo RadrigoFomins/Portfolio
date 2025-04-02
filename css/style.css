@@ -819,6 +819,7 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
 }
 
 @media (min-width: 992px) {
+  .menu:not(.desktop),
   .modal-backdrop,
   .mob-menu,
   .menu > *:not(.menu__nav) {
@@ -875,6 +876,9 @@ footer a:focus-visible, .contacts__soc a:focus-visible, .header > .scroll:focus-
   }
 }
 @media (max-width: 991.98px) {
+  .menu.desktop {
+    display: none !important;
+  }
   .mob-menu {
     display: -webkit-box;
     display: -ms-flexbox;

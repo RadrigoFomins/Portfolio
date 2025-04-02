@@ -78,7 +78,7 @@ $(document).ready(function () {
 		$('.modal').data('lastFocusedBtn', lastFocusedBtn);
 	});
 
-	$('.btn-menu-close, .menu__nav a').click(function () {
+	$('.btn-menu-close, .menu:not(.desktop) .menu__nav a').click(function () {
 		functionClose();
 	});
 
@@ -89,7 +89,7 @@ $(document).ready(function () {
 		}
 	});
 
-	// Обработчик для предотвращения закрытия при клике внутри окна
+	// Добавляем обработчик для предотвращения закрытия при клике внутри окна
 	$('.modal-content').click(function (e) {
 		e.stopPropagation();
 	});
