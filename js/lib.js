@@ -34,6 +34,7 @@ $(document).ready(function () {
 			}
 		});
 	}
+
 	// Функция закрытия модального окна
 	function functionClose() {
 		// Получаем кнопку, которая открыла модальное окно
@@ -80,6 +81,7 @@ $(document).ready(function () {
 	$('.btn-menu-close, .menu__nav a').click(function () {
 		functionClose();
 	});
+
 	// Закрытие модального окна при клике вне его
 	$(document).on('click', function (e) {
 		if ($(e.target).is('.modal-backdrop')) {
@@ -87,6 +89,10 @@ $(document).ready(function () {
 		}
 	});
 
+	// Обработчик для предотвращения закрытия при клике внутри окна
+	$('.modal-content').click(function (e) {
+		e.stopPropagation();
+	});
 });
 
 // Плавный скроллинг к якорю
